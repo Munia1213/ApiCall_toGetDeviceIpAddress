@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RetrofitBangla</string>
+
+    <string name="show_my_ip_address">Show My IP Address</string>
+    <string name="ip_address">IP Address</string>
+</resources>
