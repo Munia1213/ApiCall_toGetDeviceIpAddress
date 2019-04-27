@@ -4,8 +4,10 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.munia.retrofitbangla.network.ApiInterface;
 import com.example.munia.retrofitbangla.network.RetrofitApiClient;
@@ -20,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView cityTextView;
     private TextView countryTextView;
     private ProgressBar progressBar;
+    private Button showIpButton;
 
 
     @Override
@@ -31,8 +34,18 @@ public class MainActivity extends AppCompatActivity {
         cityTextView = findViewById(R.id.city_textView);
         countryTextView = findViewById(R.id.country_textView);
         progressBar = findViewById(R.id.progressBar);
+        showIpButton = findViewById(R.id.show_ip_button);
+
+        showIpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Hello munia, I love you!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        showMyIp();
     }
-    public void showMyIp(View view) {
+    public void showMyIp() {
 
         progressBar.setVisibility(View.VISIBLE);
 
